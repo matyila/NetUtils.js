@@ -1,0 +1,28 @@
+    /* Network IP Assign */
+/* Creative common licenses */
+/* Goodwish Matyila, BusinessWebStarter.org */
+/* goodwish@businesswebstarter.orf */
+/* Network Tools Computer Science in Js */
+
+(function(){ 
+		'use strict';
+	var index = 0;
+	var subnet = "255.255.255.0";
+	var ipAddress = "192.168.0.";
+			function locale(arg){
+					index+=1;
+					var ipv4 = [];
+					ipv4.push(arg);
+					console.log(ipv4.map(function(arr){
+							return arr + " route , workstation: "+ ipAddress +index;
+					}));
+				console.log("added to workgroup ");
+				if(index >= 10){ 
+				index = 0;
+				}else{
+				locale(subnet);
+				}
+			}
+			locale(ipAddress);
+ }());
+		
